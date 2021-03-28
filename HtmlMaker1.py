@@ -2,10 +2,10 @@
 #                                                          1.Import Module
 #                                                          2.HTML CODE SECTION   
 #                                                          3.POSSIBLY USELESS SECTION -EXTRA REMINDER HTML FILE STUFF
-#                                                          4.DEFINITONS SECTION  ****THIS IS WHERE I WORK AFTER THE EVENT LOOP WORK****
+#                                                          4.DEFINITONS SECTION  
 #                                                          5.GUI LAYOUT
 #                                                          6.START OF WINDOW
-#                                                          7.EVENT LOOP  ***THIS IS WHERE I NEED TO WORK NEXT***
+#                                                          7.EVENT LOOP  
 #                                                          8.-THE END-
 #-------------------------------------------------------------------------------------------------------------------------------------------------------------------
 #------------------------------------------------------------Import any modules----------------------------------------------------------------------------
@@ -58,9 +58,9 @@ blahmessage = """<!DOCTYPE html>
 
 #-----------------------------------------------------------------------------------------------------------------------------------------------------------------
 # --------------------------------------------------------Definitions section-------------------------------------------------------------------------------------
-#                                                              ----THIS IS WHERE I WORK AFTER I WORK THE EVENT LOOP----
+#                                                            
 def htmlwriter():  # This defines what will be written to html files using the read/write python module(this module doesn't need to be imported-native)
-    #nmof = 'example' #this is the name of the file you are making
+  
     FileType = '.html' #type of file you are making
     FinishedFileName = nmof + FileType # way that the program will add the type of file to the name of the file
     f = open(FinishedFileName,'w') #opens FinishedFileName
@@ -182,7 +182,7 @@ def htmlwriter():  # This defines what will be written to html files using the r
     f.close()#closes the page you are creating...ALWAYS CLOSE THE FILES YOU OPEN!!!!!!!!!!!!!!
     f1.write(blahmessage) #reminder page open - may not make final cut-
     f1.close()#reminder page close -may not make final cut
-    #print(g)  #prints to the shell so i know i'm not going crazy.  won't be part of the final cut
+  
     
 #-----------------------------------------------------------------------------------------------------------------------------------------------------------------
 #----------------------------------------------------------Graphic user interface(GUI) layout---------------------------------------------------------------------
@@ -213,9 +213,6 @@ layout = [[sg.Text("Name the file"), sg.Input(), sg.Button('Ok'), sg.Button('Can
            [sg.Text("Link with label:"), sg.Input(),sg.Text("File to link to:"), sg.Input()], # values[25] and values[26]
            [sg.Text("Link with label:"), sg.Input(),sg.Text("File to link to:"), sg.Input()], # values[27] and values[28]
            [sg.Text("Link with label:"), sg.Input(),sg.Text("File to link to:"), sg.Input()]] # values[29] and values[30]
-           #[sg.Text("result:")],
-           #[sg.Text(size=(30,1), key='-OUTPUT-')],
-           #[sg.Button('Ok'), sg.Button('Cancel')]]
 
 #-------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -264,8 +261,7 @@ while True:  #loop that  checks buttons for events and then if 'Ok' button event
         createfeedback = nmof + ".html created"  # feedback in the window to let you know something happened
         if values[0]:
             print (createfeedback)   #this is incomplete...need to add some more if-then conditions probably, heck if i know
-#            window['-OUTPUT-'].update(g2)
-                  
+              
             htmlwriter()  
 #---------------------------------------------------------------------------------------------------------------------------------------------------------------------
 window.close()  # now we are done.
